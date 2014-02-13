@@ -1,6 +1,6 @@
 PATH=/usr/local/bin:$PATH
 
-alias ls='ls -FAG'
+alias ls='ls -FAGh'
 alias ll='ls -lrt'
 alias ..='cd ..'
 alias f='open .'
@@ -31,6 +31,9 @@ PROMPT_COMMAND=exitstatus
 
 shopt -s nocaseglob
 shopt -s cdspell
+shopt -s extglob
+
+export EDITOR=vi
 
 #
 # git
@@ -41,3 +44,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 #GIT_PS1_SHOWUPSTREAM="auto"
+git config color.diff auto
+
+#
+# node
+#
+PATH=/usr/local/share/npm/bin:$PATH
